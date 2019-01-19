@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<!--
+
+JavaScript Snake
+By Patrick Gillespie
+http://patorjk.com/games/snake
+
+Source code is available here: https://github.com/patorjk/JavaScript-Snake
+
+-->
+    <meta charset="utf-8">
+    <title>JavaScript Snake</title>
+    <link rel=stylesheet id=style type=text/css href=./css/main-snake.css />
+    <!-- <div id="mode-wrapper">Select which mode you would like to play in. -->
+    <!-- <button id="Easy">Easy</button> -->
+    <!-- <button id="Medium">Medium</button> -->
+    <!-- <button id="Difficult">Difficult</button> -->
+    <!-- </div> -->
+</head>
+<body>
+    <div id="game-area" tabindex="0">
+    </div>
+    <script type="text/javascript" src="./js/snake.js"></script>
+    <script type="text/javascript">
+    var mySnakeBoard = new SNAKE.Board(  {
+                                            boardContainer: "game-area",
+                                            fullScreen: true
+                                        });
+    </script>
+</body>
+</html>
