@@ -965,8 +965,8 @@ SNAKE.Board = SNAKE.Board || (function() {
         config.fullScreen = (typeof config.fullScreen === "undefined") ? false : config.fullScreen;
         config.top = (typeof config.top === "undefined") ? 0 : config.top;
         config.left = (typeof config.left === "undefined") ? 0 : config.left;
-        config.width = (typeof config.width === "undefined") ? 1000 : config.width;
-        config.height = (typeof config.height === "undefined") ? 1000 : config.height;
+        config.width = (typeof config.width === "undefined") ? 400 : config.width;
+        config.height = (typeof config.height === "undefined") ? 400 : config.height;
 
         if (config.fullScreen) {
             SNAKE.addEventListener(window,"resize", function() {
