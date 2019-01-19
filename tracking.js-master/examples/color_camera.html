@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tracking.js - color with camera</title>
+  <link rel="stylesheet" href="assets/demo.css">
+  <script src="../build/tracking-min.js"></script>
+  <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
+  <script src="assets/stats.min.js"></script>
+  <script src="assets/color_camera_gui.js"></script>
+  <style>
+  video,
+  canvas {
+    margin-left: 100px;
+    margin-top: 35px;
+    position: absolute;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="demo-frame">
+    <div class="demo-container">
+      <video id="video" width="600" height="450" autoplay></video>
+      <canvas id="canvas" width="600" height="450"></canvas>
+      <p id='word1'>LEFT</p>
+      <p id='word2'>LEFT</p>
+    </div>
+  </div>
+
+  <script>
+  window.onload = function() {
+    var video = document.getElementById('video');
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var word1 = document.getElementById('word1')
+    var word2 = document.getElementById('word2')
+
+    tracking.ColorTracker.registerColor('ElecBlue', function(r, g, b) {
+      if (r < 10  && g > 150 && b < 200) {
+        return true;
+      }
+      return false;
+    });
+
+    var tracker = new tracking.ColorTracker([ 'magenta', 'yellow', 'cyan']);
+
+    tracking.track('#video', tracker, { camera: true });
+
+    tracker.on('track', function(event) {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      event.data.forEach(function(rect) {
+        if (rect.color === 'custom') {
+          rect.color = tracker.customColor;
+        }
+
+        context.strokeStyle = rect.color;
+        context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+        context.font = '11px Helvetica';
+        context.fillStyle = "#fff";
+        context.fillText('x: ' + rect.x + 'px', rect.x + rect.width +
+          5, rect.y + 11);
+        context.fillText('y: ' + rect.y + 'px', rect.x + rect.width +
+          5, rect.y + 22);
+
+        var left = true;
+
+        if (left && rect.x < canvas.width / 2) {
+          word1.innerHTML = "MY RIGHT";
+          left = false;
+        } else {
+          word1.innerHTML = "MY LEFT";
+          left = true;
+        }
+
+
+        var down = true;
+        if (down && rect.y < canvas.height / 2) {
+          word2.innerHTML = "UP";
+          down = false;
+        } else {
+          word2.innerHTML = "DOWN";
+          down = true;
+        }
+      });
+    });
+
+    initGUIControllers(tracker);
+  };
+
+  </script>
+</body>
+
+</html>
