@@ -10,7 +10,9 @@ body {
 
 #game-area {
 	margin:0px;
-	padding:0px;
+	padding:   0px;
+    width: "500px";
+    height: "100px"
 }
 
 #high-score {
