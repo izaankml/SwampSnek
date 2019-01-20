@@ -33,7 +33,7 @@ transform: scale(-1, 1); filter: FlipH;";
                 canvas.width /
                 4) {
                 if (rect.y < canvas.height / 4) {
-                    word1.innerHTML = "UP";
+                    word1.innerHTML = "Up";
                     lastKey = "up";
                 } else if (rect.y > 3 * canvas.height / 4) {
                     word1.innerHTML = "Down";
@@ -43,10 +43,10 @@ transform: scale(-1, 1); filter: FlipH;";
                 3 * canvas.height /
                 4) {
                 if (rect.x < canvas.width / 4) {
-                    word1.innerHTML = "RIGHT";
+                    word1.innerHTML = "Right";
                     lastKey = "right";
                 } else if (rect.x > 3 * canvas.width / 4) {
-                    word1.innerHTML = "LEFT";
+                    word1.innerHTML = "Left";
                     lastKey = "left";
                 }
             }

@@ -53,7 +53,7 @@ game = {
     context.textAlign = 'center';
     winner = cycle.type == 'program' ? 'USER' : 'PROGRAM';
     context.fillText('GAME OVER - ' + winner + ' WINS', canvas.width/2, canvas.height/2);
-    context.fillText('press spacebar to contine', canvas.width/2, canvas.height/2 + (cycle.height * 3));
+    context.fillText('Press spacebar to continue', canvas.width/2, canvas.height/2 + (cycle.height * 8));
     cycle.color = "#F00";
   },
 
