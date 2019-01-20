@@ -1,4 +1,4 @@
-# MotionSnek
+# SwampSnek
 This is our submission to SwampHacks 2019. Its a Gesture-Based browser game that builds on a version of tron.
 
 ## What is SwampSnek?
