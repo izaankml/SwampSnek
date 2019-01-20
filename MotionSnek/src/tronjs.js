@@ -48,11 +48,11 @@ game = {
 
   stop: function(cycle) {
     game.over = true;
-    context.fillStyle = 'black';
+    context.fillStyle = 'white';
     context.font = (canvas.height / 15) + 'px sans-serif';
     context.textAlign = 'center';
     winner = cycle.type == 'program' ? 'USER' : 'PROGRAM';
-    context.fillText('GAME OVER - ' + winner + ' WINS', canvas.width/2, canvas.height/2);
+    context.fillText('GAME OVER - ' + winner + ' WINS', canvas.width/2, canvas.height/4);
     context.fillText('Press spacebar to continue', canvas.width/2, canvas.height/2 + (cycle.height * 8));
     cycle.color = "#F00";
   },

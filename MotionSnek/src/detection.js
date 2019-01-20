@@ -22,7 +22,8 @@ transform: scale(-1, 1); filter: FlipH;";
                 rect.color = tracker.customColor;
             }
 
-            context.strokeStyle = rect.color;
+            // context.strokeStyle = rect.color;
+            context.strokeStyle = 'salmon';
             context.strokeRect(canvas.width - rect.x, rect.y,
                 -rect.width,
                 rect.height);
