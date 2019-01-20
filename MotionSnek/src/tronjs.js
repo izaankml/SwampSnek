@@ -244,5 +244,5 @@ loop = function() {
 
 main = function() {
   game.start();
-  setInterval(loop, 90);
+  setInterval(loop, 80);
 }();

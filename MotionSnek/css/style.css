@@ -36,6 +36,7 @@
 .the-game {
     display: block;
     margin: 10px auto;
+    border: 2px solid darkgrey;
 }
 
 .demo-title {
