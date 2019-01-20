@@ -10,7 +10,14 @@ window.onload = function() {
 -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
 transform: scale(-1, 1); filter: FlipH;";
 
-    var tracker = new tracking.ColorTracker(['cyan']);
+    tracking.ColorTracker.registerColor('GBlue', function(r, g, b) {
+        if (r < 100 && g > 140 && b > 150) {
+            return true;
+        }
+        return false;
+    });
+
+    var tracker = new tracking.ColorTracker(['GBlue']);
 
     tracking.track('#video', tracker, { camera: true });
 
@@ -31,7 +38,8 @@ transform: scale(-1, 1); filter: FlipH;";
             context.font = '11px Helvetica';
 
 
-            if (rect.x > canvas.width / 3 && rect.x < 2 * canvas.width / 3) {
+            if (rect.x > canvas.width / 3 && rect.x < 2 *
+                canvas.width / 3) {
                 if (rect.y < canvas.height / 3) {
                     word1.innerHTML = "Up";
                     lastKey = "up";
@@ -39,7 +47,8 @@ transform: scale(-1, 1); filter: FlipH;";
                     word1.innerHTML = "Down";
                     lastKey = "down";
                 }
-            } else if (rect.y > canvas.height / 3 && rect.y < 2 * canvas.height / 3) {
+            } else if (rect.y > canvas.height / 3 && rect.y <
+                2 * canvas.height / 3) {
                 if (rect.x < canvas.width / 3) {
                     word1.innerHTML = "Right";
                     lastKey = "right";
