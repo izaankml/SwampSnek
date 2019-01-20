@@ -5,24 +5,27 @@
     <meta charset="utf-8">
     <title>MotionSnek</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/particles.css">
     <link rel="shortcut icon" href="./css/images/favicon.ico">
     <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
     <script src="./build/tracking-min.js"></script>
-    <script src="./src/stats.min.js"></script>
     <script src="./src/color_camera_gui.js"></script>
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <div style=width: 100%">
         <div id="top-left">
-            <video class="vid" id="video" width="640" height="360" autoplay></video>
-            <canvas class="vid" id="canvas" width="640" height="360"></canvas>
-            </div>
+            <video class="vid" id="video" width="320" height="240" autoplay></video>
+            <canvas class="vid" id="canvas" width="320" height="240 "></canvas>
+        </div>
         <div id="bottom-right">
-                <canvas class="the-game" id="the-game" width="720" height="480"></canvas>
+            <canvas class="the-game" id="the-game" width="720" height="640"></canvas>
         </div>
     </div>
     <script type="text/javascript" src="./src/tronjs.js"></script>
     <script type="text/javascript" src="./src/detection.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script  src="src/particles.js"></script>
 </body>
 </html>

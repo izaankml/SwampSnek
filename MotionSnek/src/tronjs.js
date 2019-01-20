@@ -48,7 +48,7 @@ game = {
 
   stop: function(cycle) {
     game.over = true;
-    context.fillStyle = 'black';
+    context.fillStyle = 'red';
     context.font = (canvas.height / 15) + 'px sans-serif';
     context.textAlign = 'center';
     winner = cycle.type == 'program' ? 'USER' : 'PROGRAM';
@@ -244,5 +244,5 @@ loop = function() {
 
 main = function() {
   game.start();
-  setInterval(loop, 100);
+  setInterval(loop, 80);
 }();
