@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <title>MotionSnek</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/particles.css">
     <link rel="shortcut icon" href="./css/images/favicon.ico">
     <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
     <script src="./build/tracking-min.js"></script>
-    <!-- <script src="./src/stats.min.js"></script> -->
     <script src="./src/color_camera_gui.js"></script>
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <div style=width: 100%">
         <div id="top-left">
             <video class="vid" id="video" width="800" height="600" autoplay></video>
@@ -26,6 +27,8 @@
 
     <script type="text/javascript" src="./src/tronjs.js"></script>
     <script type="text/javascript" src="./src/detection.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script  src="src/particles.js"></script>
 </body>
 
 </html>

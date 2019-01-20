@@ -36,7 +36,7 @@
 .the-game {
     display: block;
     margin: 10px auto;
-    background-image: url("../testGif.mp4");
+    background-image: url("./images/speakTrees.mp4");
 }
 
 .demo-title {
