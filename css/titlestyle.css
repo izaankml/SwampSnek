@@ -7,5 +7,6 @@ body {
 button{
     top:50%;
     left:50%;
+    margin: -50px, -50px;
     position:relative;
 }

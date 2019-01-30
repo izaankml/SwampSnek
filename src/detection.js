@@ -17,7 +17,7 @@ transform: scale(-1, 1); filter: FlipH;";
         return false;
     });
 
-    var tracker = new tracking.ColorTracker(['GBlue']);
+    var tracker = new tracking.ColorTracker(['cyan']);
 
     tracking.track('#video', tracker, { camera: true });
 
