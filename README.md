@@ -10,7 +10,7 @@ Once upon a time, in a swamp in Gainsville, three young boy-os set out on a miss
 # How we built it
 SwampSnek implements Tracking.js, a computer vision library that processes everything on the client sde rather than server-side like OpenCV allowing us to have computer vision on the web. We built the website using Javascript, HTML5, and CSS3 and created the Tron game in Javascript as well. We used Tracking.js to keep track of a certain color from the user's camera, with the user having the same color token to use as a "controller" and as they moved the token they could control the game. 
 
-# Challenges we ran in to
+# Challenges we ran into
 The biggest challenge we ran into was deciding whether to process the computer vision on the front or backend. We started out processing the fingertip data on the backend using opencv4js, but ran into trouble with node and a few installation bugs. This was especially problematic because all of us were new to Javascript.
 
 We then switched all the processing to the frontend using tracking.js. This also included switching from tracking fingertips to tracking colors. This enabled us to have a game directly running on the browser!
